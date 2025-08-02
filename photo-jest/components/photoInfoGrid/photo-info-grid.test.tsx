@@ -7,12 +7,23 @@ export const PHOTO_INFO_BASE_PROPS = {
   liked: true,
   photographer: "photographer test",
   photographer_url: "test",
-  src: "/test-image.jpg",
+  src: {
+    original: "/test-image.jpg",
+    large2x: "/test-image.jpg",
+    large: "/test-image.jpg",
+    medium: "/test-image.jpg",
+    small: "/test-image.jpg",
+    portrait: "/test-image.jpg",
+    landscape: "/test-image.jpg",
+    tiny: "/test-image.jpg",
+  },
 };
 
 describe("PhotoInfoGrid", () => {
   describe("render component with props correctly", () => {
-    render(<PhotoInfoGrid {...PHOTO_INFO_BASE_PROPS} />);
+    beforeEach(() => {
+      render(<PhotoInfoGrid {...PHOTO_INFO_BASE_PROPS} />);
+    });
 
     it("render image props", () => {
       expect(screen.getByRole("img")).toHaveAttribute(
