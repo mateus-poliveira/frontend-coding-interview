@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 
-//TODO: Add logo
 export default function PhotosLayout({
   children,
 }: {
