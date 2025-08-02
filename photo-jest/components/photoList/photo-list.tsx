@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { PhotoInfoGrid } from "../photoInfoGrid/photo-info-grid";
+import { PhotoInfo } from "../photoInfoGrid/photo-info";
 import { usePhotos } from "@/context/PhotosContext";
 import { LikedToggle } from "../likedToogle/liked-toogle";
 
@@ -10,16 +10,19 @@ export const PhotoList = () => {
 
   return useMemo(
     () => (
-      <div>
+      <div className="grid gap-[12px]">
         {photos.map((props, index) => {
           const { liked, ...restWithoutLiked } = props;
           return (
-            <div key={props.id}>
+            <div
+              className="grid gap-[12px] grid-cols-[20px_auto]"
+              key={props.id}
+            >
               <LikedToggle
                 liked={props.liked}
                 onLike={() => toggleLiked(index)}
               />
-              <PhotoInfoGrid {...restWithoutLiked} />
+              <PhotoInfo {...restWithoutLiked} />
             </div>
           );
         })}

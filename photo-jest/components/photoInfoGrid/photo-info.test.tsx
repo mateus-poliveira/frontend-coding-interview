@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { PhotoInfoGrid } from "./photo-info-grid";
+import { PhotoInfo } from "./photo-info";
 
 export const PHOTO_INFO_BASE_PROPS = {
   alt: "test",
@@ -27,7 +27,7 @@ export const PHOTO_INFO_BASE_PROPS = {
 describe("PhotoInfoGrid", () => {
   describe("render component with props correctly", () => {
     beforeEach(() => {
-      render(<PhotoInfoGrid {...PHOTO_INFO_BASE_PROPS} />);
+      render(<PhotoInfo {...PHOTO_INFO_BASE_PROPS} />);
     });
 
     it("render image props", () => {

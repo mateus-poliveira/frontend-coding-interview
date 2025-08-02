@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import { PHOTO_INFO_BASE_PROPS } from "../photoInfoGrid/photo-info-grid.test";
 import { LikedToggle } from "./liked-toogle";
 
 describe("LikedToogle", () => {

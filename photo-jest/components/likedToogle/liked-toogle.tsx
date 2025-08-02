@@ -1,8 +1,6 @@
 "use client";
 
 import { useMemo } from "react";
-import { PhotoInfoGrid } from "../photoInfoGrid/photo-info-grid";
-import { usePhotos } from "@/context/PhotosContext";
 import type { Photo } from "types/photos";
 import Image from "next/image";
 

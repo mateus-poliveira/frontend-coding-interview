@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { PhotoList } from "./photo-list";
-import { PHOTO_INFO_BASE_PROPS } from "../photoInfoGrid/photo-info-grid.test";
+import { PHOTO_INFO_BASE_PROPS } from "../photoInfoGrid/photo-info.test";
 import { PhotosProvider, usePhotos } from "@/context/PhotosContext";
 
 const PHOTO_LIST_BASE_PROPS = {
