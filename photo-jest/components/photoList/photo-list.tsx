@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { PhotoInfo } from "../photoInfoGrid/photo-info";
+import { PhotoInfo } from "../photoInfo/photo-info";
 import { usePhotos } from "@/context/PhotosContext";
 import { LikedToggle } from "../likedToogle/liked-toogle";
 

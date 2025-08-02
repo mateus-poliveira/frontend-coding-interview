@@ -49,7 +49,7 @@ export const PhotoInfo = memo(
           href={photographer_url || ""}
           role="link"
         >
-          <span>
+          <span className="flex h-[12px] items-center pt-[10px]">
             <Image
               className="mr-[4px]"
               src="/images/link.png"
