@@ -6,7 +6,7 @@ import type { Photo } from "types/photos";
 interface PhotoContextType {
   photos: Photo[];
   setPhotos: (photos: Photo[]) => void;
-  toggleLiked: () => void;
+  toggleLiked: (index: number) => void;
 }
 
 const PhotoContext = createContext<PhotoContextType | undefined>(undefined);
@@ -20,7 +20,11 @@ export function PhotosProvider({
 }) {
   const [photos, setPhotos] = useState<Photo[]>(initialPhotos);
 
-  const toggleLiked = () => {};
+  const toggleLiked = (index: number) => {
+    const newPhotos = [...photos];
+    newPhotos[index].liked = !newPhotos[index].liked;
+    setPhotos(newPhotos);
+  };
 
   return (
     <PhotoContext.Provider value={{ photos, setPhotos, toggleLiked }}>
