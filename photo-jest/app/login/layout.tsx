@@ -8,7 +8,7 @@ export default function PhotosLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="max-w-xs">
       <div className="flex flex-col items-center">
         <Image
           className="mb-[24px]"
