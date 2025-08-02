@@ -1,20 +1,22 @@
 "use client";
 
-import type { Photo } from "types/photos";
+import { useMemo } from "react";
 import { PhotoInfoGrid } from "../photoInfoGrid/photo-info-grid";
+import { usePhotos } from "@/context/PhotosContext";
 
-type PhotoListProps = {
-  list: Photo[];
-};
+export const PhotoList = () => {
+  const { photos } = usePhotos();
 
-export const PhotoList = ({ list }: PhotoListProps) => {
-  return (
-    <div>
-      {list.map((props) => (
-        <div key={props.id}>
-          <PhotoInfoGrid {...props} />
-        </div>
-      ))}
-    </div>
+  return useMemo(
+    () => (
+      <div>
+        {photos.map((props) => (
+          <div key={props.id}>
+            <PhotoInfoGrid {...props} />
+          </div>
+        ))}
+      </div>
+    ),
+    [photos]
   );
 };
