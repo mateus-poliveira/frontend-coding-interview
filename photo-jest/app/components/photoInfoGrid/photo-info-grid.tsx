@@ -6,7 +6,7 @@ import Link from "next/link";
 import EmptyStart from "./EmptyStar.svg";
 import Start from "./Star.svg";
 
-type PhotoInfoGridProps = {
+export type PhotoInfoGridProps = {
   alt: string;
   avg_color: string;
   liked: boolean;
@@ -16,6 +16,7 @@ type PhotoInfoGridProps = {
 };
 
 //TODO: Add favorite button
+//TODO: Add color square
 export const PhotoInfoGrid = memo(
   ({
     alt,
