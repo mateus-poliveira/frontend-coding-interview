@@ -3,8 +3,8 @@
 import { memo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import EmptyStart from "./EmptyStar.svg";
-import Start from "./Star.svg";
+// import EmptyStart from "./EmptyStar.svg";
+// import Start from "./Star.svg";
 import type { Photo } from "types/photos";
 
 //TODO: Add favorite button
@@ -21,9 +21,9 @@ export const PhotoInfoGrid = memo(
     const [photoLiked, setPhotoLiked] = useState(liked);
     return (
       <>
-        <button onClick={() => setPhotoLiked(!photoLiked)}>
+        {/* <button onClick={() => setPhotoLiked(!photoLiked)}>
           {photoLiked ? <Start /> : <EmptyStart />}
-        </button>
+        </button> */}
         <Image
           src={src?.tiny || ""}
           alt={alt || ""}

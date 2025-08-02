@@ -5,6 +5,11 @@ export const PHOTO_INFO_BASE_PROPS = {
   alt: "test",
   avg_color: "test",
   liked: true,
+  height: 100,
+  width: 100,
+  photographer_id: 1,
+  id: 1,
+  url: "test",
   photographer: "photographer test",
   photographer_url: "test",
   src: {
