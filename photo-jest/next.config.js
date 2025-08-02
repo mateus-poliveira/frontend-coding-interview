@@ -1,4 +1,13 @@
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/photos",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
