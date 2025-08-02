@@ -15,7 +15,6 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
-    "types": ["@testing-library/jest-dom"],
     "typeRoots": ["./types", "./node_modules/@types"],
     "paths": {
       "@/components/*": ["components/*"],
