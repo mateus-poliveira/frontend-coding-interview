@@ -1,43 +1,16 @@
-# Next.js + Jest
+# Clever's Frontend Coding Interview
 
-This example shows how to configure Jest to work with Next.js.
+## Implementation Details
+The project began with the initial setup of a Next.js application configured with Jest for testing. I proceeded to create the PhotoInfoGrid and PhotoList components and defined the Photo type to ensure proper type safety when handling API data. After setting up supporting files, I implemented the logic to load photos, established a context to manage photo state, and added the toggle functionality for liking photos. Finally, I built the login form and authentication flow, applied responsive styles to both the photo page and login page using Tailwind CSS, and configured the redirect to the photo list after sign-in.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
+## Tests
+For this project, I implemented basic unit tests focused on individual components. The goal was to validate rendering logic and isolated behavior, ensuring that each component behaves correctly given different props and states. I used Jest and React Testing Library to write and run the tests.
+No integration or end-to-end tests were included due to the scope and time constraints, but the project is structured in a way that makes it easy to extend the test coverage in the future.
 
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
+## Next steps
+If I had more time or were preparing this for production, the next steps would include implementing real authentication with JWT. I would also configure support for importing SVG files properly, which I chose to skip during the test to avoid spending time on custom Next.js and Jest setup. Test coverage could be expanded with integration tests and additional unit tests across hooks and contexts. Additionally, I’d improve the login form by adding proper input validation and error handling. Feature-wise, I’d add photo pagination or infinite scrolling, and persist the "liked" state for each photo—either using local storage or syncing with a backend.
 
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
-
-## How to Use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
-
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
-
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
-## Running Tests
-
-```bash
-npm test
-```
-
-```bash
-yarn test
-```
-
-```bash
-pnpm test
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## How to Log In
+Authentication in this app is mocked for the purpose of the coding challenge.
+To log in, simply enter the email `testing@testing`, no password is required. Upon submitting the form with this value, you'll be redirected to the photo gallery page.
+ 
